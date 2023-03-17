@@ -1,0 +1,11 @@
+﻿@model IEnumerable<WebAppCK.Models.table_menu>
+
+<ul class="nav navbar-nav mb-5 ">
+    <li><a href="https://localhost:44326/">Home</li>
+    @foreach (var i in Model)
+    {
+        <li><a href="@ViewBag.meta/@i.meta/">@i.name</li>
+    }
+    <li><a href="https://localhost:44326/lien-he">Contact</li>
+</ul>
+
