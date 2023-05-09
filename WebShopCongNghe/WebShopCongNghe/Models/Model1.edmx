@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CuaHangTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="table_banners">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="png" Type="nvarchar" MaxLength="50" />
+          <Property Name="order" Type="int" />
+          <Property Name="link" Type="nvarchar(max)" />
+          <Property Name="hide" Type="bit" />
+          <Property Name="meta" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="table_catagory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="link" Type="nvarchar(max)" />
+          <Property Name="meta" Type="nvarchar" MaxLength="50" />
+          <Property Name="hide" Type="bit" />
+          <Property Name="order" Type="int" />
+          <Property Name="dateupdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="table_contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="info" Type="nvarchar(max)" />
+          <Property Name="address" Type="nvarchar" MaxLength="100" />
+          <Property Name="mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="phonenum" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="table_discount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="order" Type="int" />
+          <Property Name="img" Type="nvarchar(max)" />
+          <Property Name="hide" Type="bit" />
+          <Property Name="dateupdate" Type="smalldatetime" />
+          <Property Name="detail" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="table_footer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="compname" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="address" Type="nvarchar(max)" />
+          <Property Name="phone" Type="nvarchar" MaxLength="100" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="hide" Type="bit" />
+          <Property Name="dateupdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="table_login">
+          <Key>
+            <PropertyRef Name="userAdmin" />
+          </Key>
+          <Property Name="userAdmin" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="passAdmin" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hoTen" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="table_menu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="link" Type="nvarchar(max)" />
+          <Property Name="meta" Type="nvarchar" MaxLength="50" />
+          <Property Name="hide" Type="bit" />
+          <Property Name="order" Type="int" />
+          <Property Name="dateupdate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="table_products">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="price" Type="float" />
+          <Property Name="img" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="ntext" />
+          <Property Name="meta" Type="nvarchar(max)" />
+          <Property Name="color" Type="nvarchar" MaxLength="50" />
+          <Property Name="hide" Type="bit" />
+          <Property Name="order" Type="int" />
+          <Property Name="dateupdate" Type="smalldatetime" />
+          <Property Name="categoryid" Type="int" />
+        </EntityType>
+        <EntityContainer Name="CuaHangTestModelStoreContainer">
+          <EntitySet Name="table_banners" EntityType="Self.table_banners" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="table_catagory" EntityType="Self.table_catagory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="table_contact" EntityType="Self.table_contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="table_discount" EntityType="Self.table_discount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="table_footer" EntityType="Self.table_footer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="table_login" EntityType="Self.table_login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="table_menu" EntityType="Self.table_menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="table_products" EntityType="Self.table_products" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CuaHangTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="table_catagory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hide" Type="Boolean" />
+          <Property Name="order" Type="Int32" />
+          <Property Name="dateupdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="table_contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phonenum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="table_discount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="order" Type="Int32" />
+          <Property Name="img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hide" Type="Boolean" />
+          <Property Name="dateupdate" Type="DateTime" Precision="0" />
+          <Property Name="detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="table_footer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="compname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="hide" Type="Boolean" />
+          <Property Name="dateupdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="table_menu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hide" Type="Boolean" />
+          <Property Name="order" Type="Int32" />
+          <Property Name="dateupdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="table_products">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Double" />
+          <Property Name="img" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="meta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hide" Type="Boolean" />
+          <Property Name="order" Type="Int32" />
+          <Property Name="dateupdate" Type="DateTime" Precision="0" />
+          <Property Name="categoryid" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="CuaHangTestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="table_catagory" EntityType="Self.table_catagory" />
+          <EntitySet Name="table_contact" EntityType="Self.table_contact" />
+          <EntitySet Name="table_discount" EntityType="Self.table_discount" />
+          <EntitySet Name="table_footer" EntityType="Self.table_footer" />
+          <EntitySet Name="table_menu" EntityType="Self.table_menu" />
+          <EntitySet Name="table_products" EntityType="Self.table_products" />
+          <EntitySet Name="table_banners" EntityType="CuaHangTestModel.table_banners" />
+          <EntitySet Name="table_login" EntityType="CuaHangTestModel.table_login" />
+        </EntityContainer>
+        <EntityType Name="table_banners">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="png" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="order" Type="Int32" />
+          <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hide" Type="Boolean" />
+          <Property Name="meta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="table_login">
+          <Key>
+            <PropertyRef Name="userAdmin" />
+          </Key>
+          <Property Name="userAdmin" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="passAdmin" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CuaHangTestModelStoreContainer" CdmEntityContainer="CuaHangTestEntities">
+          <EntitySetMapping Name="table_catagory">
+            <EntityTypeMapping TypeName="CuaHangTestModel.table_catagory">
+              <MappingFragment StoreEntitySet="table_catagory">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="meta" ColumnName="meta" />
+                <ScalarProperty Name="hide" ColumnName="hide" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="dateupdate" ColumnName="dateupdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="table_contact">
+            <EntityTypeMapping TypeName="CuaHangTestModel.table_contact">
+              <MappingFragment StoreEntitySet="table_contact">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="info" ColumnName="info" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="phonenum" ColumnName="phonenum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="table_discount">
+            <EntityTypeMapping TypeName="CuaHangTestModel.table_discount">
+              <MappingFragment StoreEntitySet="table_discount">
+                <ScalarProperty Name="detail" ColumnName="detail" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="hide" ColumnName="hide" />
+                <ScalarProperty Name="dateupdate" ColumnName="dateupdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="table_footer">
+            <EntityTypeMapping TypeName="CuaHangTestModel.table_footer">
+              <MappingFragment StoreEntitySet="table_footer">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="compname" ColumnName="compname" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="hide" ColumnName="hide" />
+                <ScalarProperty Name="dateupdate" ColumnName="dateupdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="table_menu">
+            <EntityTypeMapping TypeName="CuaHangTestModel.table_menu">
+              <MappingFragment StoreEntitySet="table_menu">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="meta" ColumnName="meta" />
+                <ScalarProperty Name="hide" ColumnName="hide" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="dateupdate" ColumnName="dateupdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="table_products">
+            <EntityTypeMapping TypeName="CuaHangTestModel.table_products">
+              <MappingFragment StoreEntitySet="table_products">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="meta" ColumnName="meta" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="hide" ColumnName="hide" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="dateupdate" ColumnName="dateupdate" />
+                <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="table_banners">
+            <EntityTypeMapping TypeName="CuaHangTestModel.table_banners">
+              <MappingFragment StoreEntitySet="table_banners">
+                <ScalarProperty Name="meta" ColumnName="meta" />
+                <ScalarProperty Name="hide" ColumnName="hide" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="png" ColumnName="png" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="table_login">
+            <EntityTypeMapping TypeName="CuaHangTestModel.table_login">
+              <MappingFragment StoreEntitySet="table_login">
+                <ScalarProperty Name="hoTen" ColumnName="hoTen" />
+                <ScalarProperty Name="passAdmin" ColumnName="passAdmin" />
+                <ScalarProperty Name="userAdmin" ColumnName="userAdmin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

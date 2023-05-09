@@ -1,0 +1,11 @@
+﻿@model IEnumerable<WebShopCongNghe.Models.table_menu>
+
+<ul class="nav navbar-nav menu_nav ml-auto">
+    <li class="nav-item active"><a class="nav-link" href="https://localhost:44303/">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="https://localhost:44303/khuyen-mai">Sales</a></li>
+    @foreach (var i in Model)
+    {
+        <li class="nav-item"><a class="nav-link" href="@ViewBag.meta/@i.meta/">@i.name</a></li>
+    }
+    <li class="nav-item"><a class="nav-link" href="https://localhost:44303/lien-he">Contact</a></li>
+</ul>

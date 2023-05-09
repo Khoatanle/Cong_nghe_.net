@@ -1,0 +1,43 @@
+﻿@model WebShopCongNghe.Models.table_discount
+
+@{
+    ViewBag.Title = "getDetailDiscount";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb mb-5">
+
+    <div style="background-image: url('/Uploads/img/orange.jpg'); background-repeat: repeat-y; width:100%;" class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+
+    </div>
+</section>
+<!-- End Banner Area -->
+<!--================Blog Area =================-->
+<section class="blog_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="blog_left_sidebar">
+                        <article class="row blog_item">
+
+                            <div class="col-md-12">
+                                <div class="blog_post">
+                                        <img src="~/Uploads/img/@Model.img" alt="">
+                                    </a>
+                                    <div class="blog_details">
+                                        <h2>@Model.title</h2>
+
+                                        <p>
+                                            @Model.detail
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

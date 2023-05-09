@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/MyLayout.cshtml";
+}
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4" style="height:150px; ">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div style="font-size: 1.4rem" class="font-weight-bold text-primary text-uppercase mb-1">
+                                <a  href="@Url.Action("Index","menus")">Quản lí Menu</a>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa-solid fa-2x fa-bars text-gray-300"></i>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4" style="height:150px;  ">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div style="font-size: 1.4rem" class="font-weight-bold text-primary text-uppercase mb-1">
+                                <a href="@Url.Action("Index","banners")">Quản lí Banner</a>
+                               
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa-solid fa-image fa-2x text-gray-300"></i>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4" style="height:150px;  ">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div style="font-size: 1.4rem" class="font-weight-bold text-primary text-uppercase mb-1">
+                                <a  href="@Url.Action("Index", "discount")">Quản lí khuyến mãi</a>
+
+                               
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa-solid fa-tags fa-2x text-gray-300"></i>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4" style="height:150px;  ">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div style="font-size: 1.4rem" class="font-weight-bold text-primary text-uppercase mb-1">
+                                <a href="@Url.Action("Index", "catagory")">Quản lí thể loại</a>
+
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa-solid fa-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4" style="height:150px;  ">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div style="font-size: 1.4rem" class="font-weight-bold text-primary text-uppercase mb-1">
+                                <a href="@Url.Action("Index", "products")">Quản lí sản phẩm</a>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa-solid fa-desktop fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+

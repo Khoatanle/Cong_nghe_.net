@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebShopCongNghe.Models.table_products>
+
+@foreach (var i in Model)
+{
+    <div class="col-lg-3 col-md-6">
+        <div class="single-product">
+            <a href="/@ViewBag.meta/@i.meta/@i.id">
+                <img style="width:255px; height:220px" class="img-fluid" src="~/Uploads/img/@i.img" alt="">
+            </a>
+            <div class="product-details">
+                <h6 style="height: 40px">
+                    @i.name
+                </h6>
+                <div class="price">
+                    <h6 >@i.price</h6>
+                    <h6 class="l-through">$210.00</h6>
+                </div>
+                <div class="prd-bottom">
+
+                    <a href="" class="social-info">
+                        <span class="ti-bag"></span>
+                        <p class="hover-text">add to bag</p>
+                    </a>
+                    <a href="" class="social-info">
+                        <span class="lnr lnr-heart"></span>
+                        <p class="hover-text">Wishlist</p>
+                    </a>
+                    <a href="" class="social-info">
+                        <span class="lnr lnr-sync"></span>
+                        <p class="hover-text">compare</p>
+                    </a>
+                    <a href="" class="social-info">
+                        <span class="lnr lnr-move"></span>
+                        <p class="hover-text">view more</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+}

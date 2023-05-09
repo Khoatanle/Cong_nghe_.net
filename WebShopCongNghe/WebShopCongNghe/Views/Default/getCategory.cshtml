@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebShopCongNghe.Models.table_catagory>
+
+@foreach (var i in Model)
+{
+    <!-- start product Area -->
+    <section class="owl-carousel active-product-area section_gap">
+        <!-- single product slide -->
+        <div class="single-product-slider">
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="section-title">
+                            <h1><a href="@ViewBag.meta/@i.meta/">@i.name</a></h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- single product -->
+                    @Html.Action("getProduct", "Default", new { id = @i.id, metatitle = @ViewBag.metatitle })
+
+                </div>
+            </div>
+        </div>
+        <!-- single product slide -->
+    </section>
+    <!-- end product Area -->
+}
+
